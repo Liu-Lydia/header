@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>div重疊 疊加例項 排層疊順序</title>
+    <style>
+        #div-a {
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            z-index: 100;
+            background: #F00;
+            width: 200px;
+            height: 100px
+        }
+
+        /* div背景色為紅色 */
+        #div-b {
+            position: absolute;
+            left: 80px;
+            top: 30px;
+            z-index: 80;
+            background: #FF0;
+            width: 200px;
+            height: 100px
+        }
+
+        /* 背景為黃色 */
+        #div-c {
+            position: absolute;
+            left: 130px;
+            top: 30px;
+            z-index: 70;
+            background: #00F;
+            width: 200px;
+            height: 100px
+        }
+
+        /* 背景為藍色 */
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+        <div id="div-a">我背景為紅色</div>
+        <div id="div-b">我背景為黃色</div>
+        <div id="div-c">我背景為藍色</div>
+    
+    <script>
+        $("#div-b").mouseover(function () {
+            console.log($(this).prevAll('div'));
+            $('#div-a').css('left','0px');
+        });
+        $("#div-c").mouseover(function () {
+            console.log($(this).prevAll('div'));
+            $('#div-a').css('left','0px');
+            $('#div-b').css('left','50px');
+        });
+        $("#div-b").mouseleave(function () {
+            console.log($(this).prevAll('div'));
+            $('#div-a').css('left','30px');
+        });
+        $("#div-c").mouseleave(function () {
+            console.log($(this).prevAll('div'));
+            $('#div-a').css('left','30px');
+            $('#div-b').css('left','80px');
+        });
+
+    </script>
+</body>
+
+</html>

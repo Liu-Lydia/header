@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>head</title>
+
+    <link rel="stylesheet" href="./meal.css" />
+    <link rel="stylesheet" href="./index.css" />
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link href="./fontawesome/css/all.css" rel="stylesheet" />
+
+    <style>
+      span {
+        display: none;
+      }
+
+      .lll-trans-inline-block {
+        display: inline-block;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col p-0">
+            <nav class="col-10 d-flex align-items-center m-auto">
+              <ul class="list-unstyled d-flex align-items-center mr-auto">
+                <li>
+                  <a href="#"
+                    ><img
+                      src="./imgs/SimpleMeal_LOGO.PNG"
+                      class="lll-logo-square"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="txt-sub1 lll-header-list lll-distance-logo lll-nav-distance"
+                    href="#"
+                    >最新活動</a
+                  >
+                </li>
+                <li>
+                  <a class="txt-sub1 lll-header-list lll-nav-distance" href="#"
+                    >關於我們</a
+                  >
+                </li>
+                <li class="dropdown">
+                  <a
+                    class="txt-sub1 lll-header-list dropdown-toggle lll-nav-distance"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    菜單介紹
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a
+                      class="txt-sub1 lll-header-list lll-header-list-item"
+                      href="#"
+                      >菜單介紹</a
+                    >
+                    <a
+                      class="txt-sub1 lll-header-list lll-header-list-item"
+                      href="#"
+                      >共享食譜</a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <a class="txt-sub1 lll-header-list lll-nav-distance" href="#"
+                    >驚喜廚房</a
+                  >
+                </li>
+              </ul>
+
+              <ul class="list-unstyled d-flex">
+                <li class="lll-header-icon-distance">
+                  <a class="lll-header-icon-style cart" href="#"
+                    ><span class="txt-sub1 pr-2">購物車</span>
+                    <i id="lll-cart-mouseenter" class="fas fa-shopping-cart"></i
+                  ></a>
+                </li>
+                <li class="lll-header-icon-distance">
+                  <a class="lll-header-icon-style grade" href="#"
+                    ><span class="txt-sub1 pr-2">我的成就</span
+                    ><i id="lll-grade-mouseenter" class="fas fa-medal"></i
+                  ></a>
+                </li>
+                <li class="lll-header-icon-distance">
+                  <a class="lll-header-icon-style" href="#"
+                    ><span class="txt-sub1 pr-2 d-none">會員中心</span
+                    ><i class="fas fa-user"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="lll-header-icon-style" href="#"
+                    ><i class="far fa-question-circle"></i
+                  ></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+    
+      $("#lll-cart-mouseenter").on("mouseenter", function () {
+        console.log("4545");
+        $(".cart > span").addClass("lll-trans-inline-block");
+      });
+      $("#lll-cart-mouseenter").on("mouseout", function () {
+        console.log("4545");
+        $("span").removeClass("lll-trans-inline-block");
+      });
+      $("#lll-grade-mouseenter").on("mouseenter", function () {
+        console.log("4545");
+        $(".grade > span").addClass("lll-trans-inline-block")
+      });
+      $("#lll-grade-mouseenter").on("mouseout", function () {
+        console.log("4545");
+        $(".grade > span").removeClass("lll-trans-inline-block");
+      });
+    </script>
+  </body>
+</html>
